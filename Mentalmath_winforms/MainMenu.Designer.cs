@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblvol = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblheader
@@ -79,7 +80,7 @@
             // 
             this.lblhighscore.Font = new System.Drawing.Font("Tektur", 17F);
             this.lblhighscore.ForeColor = System.Drawing.Color.Turquoise;
-            this.lblhighscore.Location = new System.Drawing.Point(209, 62);
+            this.lblhighscore.Location = new System.Drawing.Point(215, 62);
             this.lblhighscore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblhighscore.Name = "lblhighscore";
             this.lblhighscore.Size = new System.Drawing.Size(335, 53);
@@ -142,13 +143,23 @@
             this.lblvol.Text = "TURN ON MUSIC";
             this.lblvol.Click += new System.EventHandler(this.lblvol_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Turquoise;
+            this.button1.Location = new System.Drawing.Point(9, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(146, 36);
+            this.button1.TabIndex = 11;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // MainMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(586, 449);
-            this.Controls.Add(this.lblvol);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnrules);
@@ -156,6 +167,8 @@
             this.Controls.Add(this.lblpresskey);
             this.Controls.Add(this.lblheader2);
             this.Controls.Add(this.lblheader);
+            this.Controls.Add(this.lblvol);
+            this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
@@ -182,5 +195,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblvol;
+        private System.Windows.Forms.Button button1;
     }
 }

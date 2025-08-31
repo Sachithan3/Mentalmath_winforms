@@ -37,7 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblvol = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblheader
@@ -45,10 +44,10 @@
             this.lblheader.AutoEllipsis = true;
             this.lblheader.Font = new System.Drawing.Font("Tektur", 35F);
             this.lblheader.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblheader.Location = new System.Drawing.Point(42, 171);
+            this.lblheader.Location = new System.Drawing.Point(-49, 173);
             this.lblheader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblheader.Name = "lblheader";
-            this.lblheader.Size = new System.Drawing.Size(498, 53);
+            this.lblheader.Size = new System.Drawing.Size(682, 80);
             this.lblheader.TabIndex = 0;
             this.lblheader.Text = "MENTAL MATH GAME";
             this.lblheader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -67,20 +66,20 @@
             // 
             this.lblpresskey.AutoSize = true;
             this.lblpresskey.BackColor = System.Drawing.Color.Black;
-            this.lblpresskey.Font = new System.Drawing.Font("Tektur", 14F);
+            this.lblpresskey.Font = new System.Drawing.Font("Tektur", 12F);
             this.lblpresskey.ForeColor = System.Drawing.Color.SpringGreen;
-            this.lblpresskey.Location = new System.Drawing.Point(32, 417);
+            this.lblpresskey.Location = new System.Drawing.Point(11, 419);
             this.lblpresskey.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblpresskey.Name = "lblpresskey";
-            this.lblpresskey.Size = new System.Drawing.Size(538, 25);
+            this.lblpresskey.Size = new System.Drawing.Size(262, 26);
             this.lblpresskey.TabIndex = 4;
-            this.lblpresskey.Text = "PRESS ENTER TO START     |     PRESS BACKSPACE TO EXIT   ";
+            this.lblpresskey.Text = "PRESS ENTER TO START     ";
             // 
             // lblhighscore
             // 
             this.lblhighscore.Font = new System.Drawing.Font("Tektur", 17F);
             this.lblhighscore.ForeColor = System.Drawing.Color.Turquoise;
-            this.lblhighscore.Location = new System.Drawing.Point(242, 52);
+            this.lblhighscore.Location = new System.Drawing.Point(209, 62);
             this.lblhighscore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblhighscore.Name = "lblhighscore";
             this.lblhighscore.Size = new System.Drawing.Size(335, 53);
@@ -98,7 +97,7 @@
             this.btnrules.Location = new System.Drawing.Point(52, 59);
             this.btnrules.Margin = new System.Windows.Forms.Padding(2);
             this.btnrules.Name = "btnrules";
-            this.btnrules.Size = new System.Drawing.Size(112, 38);
+            this.btnrules.Size = new System.Drawing.Size(131, 58);
             this.btnrules.TabIndex = 7;
             this.btnrules.TabStop = false;
             this.btnrules.Text = "RULES";
@@ -109,14 +108,15 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Tektur", 14F);
+            this.label1.Font = new System.Drawing.Font("Tektur", 12F);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(298, 418);
+            this.label1.Location = new System.Drawing.Point(289, 419);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 25);
+            this.label1.Size = new System.Drawing.Size(286, 26);
             this.label1.TabIndex = 8;
             this.label1.Text = "PRESS BACKSPACE TO EXIT   ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -124,9 +124,10 @@
             this.label2.Font = new System.Drawing.Font("Tektur", 14F);
             this.label2.Location = new System.Drawing.Point(270, 416);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 25);
+            this.label2.Size = new System.Drawing.Size(19, 31);
             this.label2.TabIndex = 9;
             this.label2.Text = "|";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblvol
             // 
@@ -136,23 +137,10 @@
             this.lblvol.Location = new System.Drawing.Point(11, 9);
             this.lblvol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblvol.Name = "lblvol";
-            this.lblvol.Size = new System.Drawing.Size(115, 18);
+            this.lblvol.Size = new System.Drawing.Size(137, 22);
             this.lblvol.TabIndex = 10;
             this.lblvol.Text = "TURN ON MUSIC";
             this.lblvol.Click += new System.EventHandler(this.lblvol_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(6, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 29);
-            this.button1.TabIndex = 11;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // MainMenu
             // 
@@ -168,7 +156,6 @@
             this.Controls.Add(this.lblpresskey);
             this.Controls.Add(this.lblheader2);
             this.Controls.Add(this.lblheader);
-            this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
@@ -195,6 +182,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblvol;
-        private System.Windows.Forms.Button button1;
     }
 }
